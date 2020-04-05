@@ -1,0 +1,42 @@
+{
+  "name": "offcircle",
+  "version": "1.0.1",
+  "description": "Recreation of Matplotlib ellipse demo",
+  "main": "index.js",
+  "module": "main.js",
+  "scripts": {
+    "lint": "eslint --fix --ext .js .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agmoss/offcircle.git"
+  },
+  "author": "Andrew Moss <andrew@m0ss.dev> (https://m0ss.dev/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/agmoss/offcircle/issues"
+  },
+  "homepage": "https://github.com/agmoss/offcircle#readme",
+  "engines": {
+    "node": ">=12"
+  },
+  "keywords": [
+    "ellipse",
+    "matplotlib",
+    "canvas",
+    "art"
+  ],
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1"
+  },
+  "dependencies": {
+    "canvas": "^2.6.1",
+    "esm": "^3.2.25"
+  }
+}

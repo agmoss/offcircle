@@ -1,6 +1,6 @@
 {
   "name": "offcircle",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Recreation of Matplotlib ellipse demo",
   "main": "index.js",
   "module": "main.js",

@@ -3,7 +3,7 @@
   "version": "1.0.2",
   "description": "Recreation of Matplotlib ellipse demo",
   "main": "index.js",
-  "module": "main.js",
+  "module": "index.js",
   "scripts": {
     "lint": "eslint --fix --ext .js .",
     "example": "node -r esm example",
@@ -31,6 +31,8 @@
     "python"
   ],
   "devDependencies": {
+    "canvas": "^2.6.1",
+    "chai-spies": "^1.0.0",
     "chai": "^4.2.0",
     "eslint": "^6.8.0",
     "eslint-config-standard": "^14.1.1",
@@ -41,7 +43,6 @@
     "mocha": "^7.1.1"
   },
   "dependencies": {
-    "canvas": "^2.6.1",
     "esm": "^3.2.25"
   }
 }

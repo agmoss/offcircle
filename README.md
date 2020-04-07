@@ -11,7 +11,7 @@
 </div>
 <br />
 <div align="center">
-  <a>
+  <a href="https://www.npmjs.com/package/offcircle">
     <img src="https://img.shields.io/npm/v/offcircle" alt="NPM Version">
   </a>
 </div>
@@ -23,48 +23,72 @@
 npm install offcircle
 ```
 
-
 ## API
 
-```javascript
-// default
-offCircle() // defaults to offCircle({width:500, height: 500, ellipseCount:120})
+The offCircle function operates on the Canvas API (node & browser).
 
-// custom 
-offCircle({width:200, height: 900, ellipseCount:500})
+1. `ctx` =  2D canvas context to render on
+2. `ellipseCount` = Number of ellipses to render on the canvas (defaults to 120)
+
+returns `Void`
+
+```javascript
+offCircle(ctx,ellipseCount)
 ```
 
 ## Usage
 
-### CommonJS
-```javascript 
-var fs = require('fs')
-var path = require('path')
-var offCircle = require('offcircle')
-
-var canvasWithEllipses = offCircle()
-var out = fs.createWriteStream(path.join(__dirname, '/example.png'))
-var stream = canvasWithEllipses.createPNGStream()
-
-stream.on('data', function (chunk) {
-  out.write(chunk)
-})
-
-```
-
-### ES6 modules
+### Node
 ```javascript
 import fs from 'fs'
 import path from 'path'
+import Canvas from 'canvas'
 import offCircle from 'offcircle'
 
-var canvasWithEllipses = offCircle()
-var out = fs.createWriteStream(path.join(__dirname, '/example.png'))
-var stream = canvasWithEllipses.createPNGStream()
+// or common js
 
+var fs = require('fs')
+var path = require('path')
+var Canvas = require('canvas')
+var offCircle = require('offcircle')
+
+var canvas = Canvas.createCanvas(500, 500)
+var ctx = canvas.getContext('2d')
+offCircle(ctx, 120)
+
+var out = fs.createWriteStream(path.join(__dirname, '/example.png'))
+var stream = canvas.createPNGStream()
 stream.on('data', function (chunk) {
   out.write(chunk)
 })
+```
+
+### Web (React)
+
+```javascript
+import React, { useEffect } from 'react';
+import './App.css';
+import offCircle from "offcircle";
+
+function App() {
+  const canvasRef = React.useRef(null);
+  useEffect(()=> {
+    const canvas = canvasRef.current
+    const ctx = canvas.getContext('2d')
+    offCircle(ctx,1000)
+  })
+  return (
+    <div className="App">
+    <canvas
+      ref={canvasRef}
+      width={window.innerWidth}
+      height={window.innerHeight}
+    />
+    </div>
+  );
+}
+
+export default App;
 
 ```
 ## License

@@ -1,7 +1,7 @@
-import fs from 'fs'
-import path from 'path'
-import Canvas from 'canvas'
-import offCircle from '../index'
+const fs = require('fs')
+const path = require('path')
+const Canvas = require('canvas')
+const offCircle = require('../lib')
 
 var canvas = Canvas.createCanvas(500, 500)
 var ctx = canvas.getContext('2d')

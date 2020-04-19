@@ -2,12 +2,12 @@
   "name": "offcircle",
   "version": "3.0.1",
   "description": "Recreation of Matplotlib ellipse demo",
-  "main": "index.js",
-  "module": "index.js",
+  "main": "lib/index.js",
+  "module": "lib/index.js",
   "scripts": {
     "lint": "eslint --fix --ext .js .",
-    "example": "node -r esm example",
-    "test": "mocha --require esm"
+    "example": "node example",
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -41,8 +41,5 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
     "mocha": "^7.1.1"
-  },
-  "dependencies": {
-    "esm": "^3.2.25"
   }
 }

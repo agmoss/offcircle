@@ -1,11 +1,14 @@
 'use strict'
 
-import Canvas from 'canvas'
-import { assert } from 'chai'
-import { describe, it } from 'mocha'
+const Canvas = require('canvas')
+var chai = require('chai')
+var mocha = require('mocha')
+var assert = chai.assert
+var describe = mocha.describe
+var it = mocha.it
 
 // TODO: Make tests for the calling of offCircle()
-var offCircle = require('../index')
+var offCircle = require('../lib')
 
 describe('offCircle', function () {
   var canvas = Canvas.createCanvas(500, 500)

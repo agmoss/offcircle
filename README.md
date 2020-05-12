@@ -1,7 +1,7 @@
 <h1 align="center">offcircle</h1>
 
 <div align="center">
-  <img src="./example/example.png" alt="Logo" width="500" height="500"/>
+  <img src="https://m0ss.blob.core.windows.net/media/offcircle.png" alt="Logo" width="500" height="500"/>
 </div>
 <div align="center">
   <strong>JavaScript Generative Art</strong>
